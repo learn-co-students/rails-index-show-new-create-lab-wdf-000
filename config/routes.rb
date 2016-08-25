@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  # resources :coupons, only: [:index, :new, :create]
+  # get '/coupons/:id', to: 'coupons#show', as: 'coupon'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
@@ -13,7 +14,8 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-
+  resources :coupons
+  get 'coupons/:id' => 'coupons#show'
   # Example resource route with options:
   #   resources :products do
   #     member do
