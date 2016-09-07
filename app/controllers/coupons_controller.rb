@@ -10,12 +10,6 @@ class CouponsController < ApplicationController
     @coupon = Coupon.new
     # binding.pry
 
-    # if !params[:coupon].empty?
-    #     @coupon.coupon_code = params[:coupon][:coupon_code]
-    #     @coupon.store = params[:coupon][:store]
-    #     @coupon.save
-    # else
-
       @coupon[:coupon_code] = params[:coupon_code]
       @coupon[:store] = params[:store]
       @coupon.save
